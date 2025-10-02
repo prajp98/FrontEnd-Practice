@@ -46,36 +46,70 @@ console.log("Min "+minValue+" Max "+maxValue);
 //Arithmetic Operators
 x = 10;
 y = 5;
-x += y;
-console.log("x += y");
-console.log("x = "+x+", y = "+y);
+let z = x + y;
+console.log("z = x + y");
+console.log("z = "+z);
 
 x = 10;
 y = 5;
-x += y;
-console.log("x += y");
-console.log("x = "+x+", y = "+y);
+z = x - y;
+console.log("z = x - y");
+console.log("z = "+z);
 
 x = 10;
 y = 5;
-x += y;
-console.log("x += y");
-console.log("x = "+x+", y = "+y);
+z = x * y;
+console.log("z = x * y");
+console.log("z = "+z);
 
 x = 10;
 y = 5;
-x += y;
-console.log("x += y");
-console.log("x = "+x+", y = "+y);
+z = x ** y;
+console.log("z = x ** y");
+console.log("z = "+z);
 
 x = 10;
 y = 5;
-x += y;
-console.log("x += y");
-console.log("x = "+x+", y = "+y);
+z = x / y;
+console.log("z = x / y");
+console.log("z = "+z);
 
 x = 10;
 y = 5;
-x += y;
-console.log("x += y");
+z = x % y;
+console.log("z = x % y");
+console.log("z = "+z);
+
+x = 10;
+y = 5;
+z = x++;
+console.log("z = x++");
+console.log("z = "+z);
+
+x = 10;
+y = 5;
+z = ++x;
+console.log("z = ++x");
+console.log("z = "+z);
+
+x = 10;
+y = 5;
+z = x--;
+console.log("z = x--");
+console.log("z = "+z);
+
+x = 10;
+y = 5;
+z = --x;
+console.log("z = --x");
+console.log("z = "+z);
+
+x = true;
+y = x &&= 10;
+console.log("y = x &&= 10");
+console.log("x = "+x+", y = "+y);
+
+x = true;
+y = x ||= 10;
+console.log("y = x ||= 10");
 console.log("x = "+x+", y = "+y);
