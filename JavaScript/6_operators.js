@@ -112,6 +112,12 @@ console.log("x = "+x+", y = "+y+"\n");
 
 
 //Comparison Operators
+//When comparing two strings, "2" will be greater than "12".
+// When comparing a string with a number, 
+// JavaScript will convert the string to a number when doing the comparison. 
+// An empty string converts to 0. 
+// A non-numeric string converts to NaN which is always false.
+// Strings are compared alphabetically
 x = 10;
 y = 5;
 console.log("x == y  "+ (x == y));
@@ -187,3 +193,50 @@ console.log("5 >> 1 = "+ (x)+"\n");
 
 x = 5 >>> 1;
 console.log("5 >>> 1 = "+ (x)+"\n");
+
+
+//Logical Assignment Operators
+//ES2020 features
+//0, null, undefined are considered false
+//If the first value is true, the second value is assigned.
+
+//&&= Operator
+x = true;
+y = x &&= 10;
+console.log("x = "+x);
+console.log("y = x &&= 10;");
+console.log("x = "+x+", y = "+y+"\n");
+
+x = false;
+y = x &&= 10;
+console.log("x = "+x);
+console.log("y = x &&= 10;");
+console.log("x = "+x+", y = "+y+"\n");
+
+//If the first value is false, the second value is assigned
+//||= Operator
+x = true;
+y = x ||= 10;
+console.log("x = "+x);
+console.log("y = x ||= 10;");
+console.log("x = "+x+", y = "+y+"\n");
+
+x = false;
+y = x ||= 10;
+console.log("x = "+x);
+console.log("y = x ||= 10;");
+console.log("x = "+x+", y = "+y+"\n");
+
+//If the first value is undefined or null, the second value is assigned.
+//??= Operator
+x = false;
+y = x ??= 10;
+console.log("x = "+x);
+console.log("y = x ??= 10;");
+console.log("x = "+x+", y = "+y+"\n");
+
+x = null;
+y = x ??= 10;
+console.log("x = "+x);
+console.log("y = x ??= 10;");
+console.log("x = "+x+", y = "+y+"\n");
