@@ -24,6 +24,12 @@ let myFunction = function(a, b) {return a * b};
 let result = myFunction(4, 3);
 console.log("Result is "+result);
 
+//With arrow
 myFunction = (a, b) => a * b;
 result = myFunction(4, 3);
 console.log("Result is "+result);
+
+// Parameters are the names listed in the function definition.
+// Parameters are the names of the values that will be passed.
+// Arguments are the values passed to the function when it is invoked or called.
+// Arguments are the values received by the function.
