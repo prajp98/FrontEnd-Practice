@@ -166,6 +166,14 @@ x = 10;
 y = 5;
 console.log("!(x == y)  "+ (!(x == y)));
 
+//Nullish operator ??
+let name1 = null;
+let text = "missing";
+let result = name1 ?? text;
+console.log("name1 = "+name1+" text = "+text);
+console.log("name1 ?? text = "+result);
+
+
 //Ternary operator
 let age = 20;
 let voteable = (age < 18) ? "Too young":"Old enough";
