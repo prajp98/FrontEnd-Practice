@@ -106,7 +106,7 @@ console.log(fruits);
 //The difference between the new toSpliced() method and the old splice() 
 // method is that the new method creates a new array, 
 // keeping the original array unchanged, while the old method altered the original array.
-const months = ["Jan", "Feb", "Mar", "Apr"];
+const months = ["Jan", "Feb", "Mar", "Apr","May"];
 const spliced = months.toSpliced(0, 1);
 console.log(spliced);
 
@@ -145,16 +145,151 @@ console.log(high);
 //The findLastIndex() method finds the index of the last element that satisfies a condition.
 let pos = temp.findLastIndex(x => x > 40); 
 console.log(pos);
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
+
+//The sort() method sorts an array alphabetically
+fruits.sort();
+console.log(fruits);
+
+//The reverse() method reverses the elements in an array
+fruits.reverse();
+console.log(fruits);
+
+//The toSorted() method as a safe way to sort 
+// an array without altering the original array.
+const sorted = months.toSorted();
+console.log(sorted);
+//The toReversed() method as a safe way to 
+//reverse an array without altering the original array.
+const reversed = months.toReversed();
+console.log(reversed);
+
+//By default, the sort() function sorts values as strings.
+//So use this
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+console.log(points);
+
+//Min
+console.log(Math.min.apply(null, points));
+//Max
+console.log(Math.max.apply(null, points));
+
+const cars4 = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+]; 
+cars4.sort(function(a, b){return a.year - b.year}); 
+console.log(cars4);
+
+//forEach()
+const numbers1 = [45, 4, 9, 16, 25];
+let txt = "";
+numbers1.forEach(myFunction);
+
+function myFunction(value) {
+  txt += value+" ";
+}
+console.log(numbers1);
+
+// The map() method creates a new array by performing a function on each array element.
+// The map() method does not execute the function for array elements without values.
+// The map() method does not change the original array.
+const numbers3 = [45, 4, 9, 16, 25];
+const numbers4 = numbers3.map(myFunction);
+
+function myFunction(value) {
+  return value * 2;
+}
+console.log(numbers4);
+
+//The flatMap() method first maps all elements of an array 
+// and then creates a new array by flattening the array.
+const arr = [1, 2, 3, 4, 5, 6];
+const newArray = arr.flatMap((x) => x * 2);
+
+//he filter() method creates a new array with array elements that pass a test.
+const over18 = numbers.filter(myFunction);
+function myFunction(value) {
+  return value > 18;
+} 
+console.log(over18);
+
+//The reduce() method runs a function on each array element to produce a single value.
+let sum = numbers.reduce(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+} 
+
+console.log(sum);
+
+let sum1 = numbers.reduceRight(myFunction);
+
+function myFunction(total, value, index, array) {
+  return total + value;
+} 
+console.log(sum1);
+
+//The every() method checks if all array values pass a test.
+let allOver18 = numbers.every(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+} 
+console.log(allOver18);
+
+let someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+} 
+console.log(someOver18);
+
+// The Array.from() method returns an Array object from:
+//     Any iterable object
+//     Any object with a length property
+let text = "ABCDEFG";
+console.log(Array.from(text));
+
+const myNumbers = [1,2,3,4];
+const myArr4 = Array.from(myNumbers, (x) => x * 2);
+
+//The Array.keys() method returns an Array Iterator object with the keys of an array.
+const keys = fruits.keys();
+
+for (let x of keys) {
+  text += x + " ";
+}
+console.log(text);
+
+//The entries() method returns an Array Iterator object with key/value pairs
+text="";
+const f = fruits.entries();
+
+for (let x of f) {
+  text+= x;
+}
+console.log(text);
+
+//Array with() method as a safe way to update elements in an array without altering the original array.
+
+console.log(months.with(2, "March"));
+
+//The ... operator expands an array into individual elements.
+const arr5 = [1, 2, 3];
+const arr6 = [4, 5, 6];
+
+const arr7 = [...arr1, ...arr2];
+console.log(arr7);
+
+const numbers2 = [23,55,21,87,56];
+let minValue = Math.min(...numbers2);
+let maxValue = Math.max(...numbers2);
+
+//The rest operator (...) allows us to destruct an array and collect the leftovers:
+let a, rest;
+const arr8 = [1,2,3,4,5,6,7,8];
+
+[a, ...rest] = arr8;
+console.log(arr8);
