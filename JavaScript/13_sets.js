@@ -134,28 +134,3 @@ mySet.add(myObj);
 
 // Do I have myObj in the mySet?
 let answer = mySet.has(myObj);
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
-
-
