@@ -34,6 +34,12 @@ const person2 = new Object({
 person.lastName;
 person["lastName"];
 
+//Adding New Properties
+person.nationality = "English";
+
+//Deleting Properties
+delete person.age;
+
 //Object Methods
 //Object methods are actions that can be performed on objects.
 //Object methods are function definitions stored as property values
@@ -62,3 +68,66 @@ const myFather = new Person("John", "Doe", 50, "blue");
 const myMother = new Person("Sally", "Rally", 48, "green");
 const mySister = new Person("Anna", "Rally", 18, "green");
 const mySelf = new Person("Johnny", "Rally", 22, "green");
+
+// Create an Object:
+const person4 = {
+  firstName: "John",
+  lastName: "Doe"
+};
+
+// Create new Object
+const man = Object.create(person4);
+man.firstName = "Peter";
+console.log(man);
+
+const fruits = [
+  ["apples", 300],
+  ["pears", 900],
+  ["bananas", 500]
+  ];
+  
+  const myObj = Object.fromEntries(fruits);
+  console.log(myObj);
+
+
+// Create Target Object
+const person5 = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+// Create Source Object
+const person6 = {firstName: "Anne",lastName: "Smith"};
+
+// Assign Source to Target
+Object.assign(person5, person6);
+
+//Object.values() creates an array from the property values
+// Create an Object
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Create an Array
+const myArray = Object.values(person);
+
+// Stringify the Array
+text = myArray.toString();
+console.log(text);
+
+//Object.entries() makes it simple to use objects in loops
+const fruits1 = {Bananas:300, Oranges:200, Apples:500};
+
+text = "";
+for (let [fruit, value] of Object.entries(fruits1)) {
+  text += fruit + ": " + value;
+}
+console.log(text);
+
+//Using JSON.stringify()
+text = JSON.stringify(person);
+console.log(text);
