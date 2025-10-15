@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Changing HTML Content
+    </head>
+    <body>
+        <p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+<img id="image" src="https://www.w3schools.com/js/landscape.jpg" width="160" height="120">
+
+<script>
+document.getElementById("image").src = "https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=";
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Date : " + Date();
+</script>
+
+<p>Changing the HTML style:</p>
+
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blue";
+document.getElementById("p2").style.fontFamily = "Arial";
+document.getElementById("p2").style.fontSize = "larger";
+</script>
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+    </body>
+</html>
